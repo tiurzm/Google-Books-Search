@@ -57,9 +57,7 @@ class Home extends Component {
   render() {
     return (
       <>
-        <Jumbotron>
-          <h1>Google BooksList Search</h1>
-        </Jumbotron>
+        <Jumbotron/>
         <Container>
           <Row>
             <Col size="md-12">
