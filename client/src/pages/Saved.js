@@ -31,18 +31,16 @@ class Saved extends Component {
 
   render() {
     return (
-      <Container>
+      <>
+      <Jumbotron/>
+      <Container>  
         <Row>
           <Col size="md-12">
-            <Jumbotron>
-              <h1 className="text-center">
-                <strong>Google Books Search</strong>
-              </h1>
-              <h2 className="text-center">These are the books you have curated. Press "View" to see more information on that title. Press "Delete" to ... well, you know ... delete an item from your Saved Books list.</h2>
-            </Jumbotron>
+            <h2 className="text-center">
+              <strong>Google Books</strong>
+            </h2>
+            <h3 className="text-center">These are the books you have saved</h3>
           </Col>
-        </Row>
-        <Row>
           <Col size="md-12">
             <Card title="Saved Books" icon="bookmark">
               {this.state.books.length ? (
@@ -51,6 +49,7 @@ class Saved extends Component {
                     <BooksList
                       key={book._id}
                       title={book.title}
+                      subtitle={book.subtitle}
                       link={book.link}
                       authors={book.authors.join(", ")}
                       description={book.description}
@@ -72,8 +71,8 @@ class Saved extends Component {
             </Card>
           </Col>
         </Row>
-         
       </Container>
+      </>
     );
   }
 }

@@ -11,7 +11,7 @@ class Home extends Component {
   state = {
     books: [],
     q: "",
-    message: "Enter a book title to begin!"
+    message: "Enter a book title"
   };
 
   handleInputChange = event => {
@@ -31,7 +31,7 @@ class Home extends Component {
       .catch(() =>
         this.setState({
           books: [],
-          message: "No books were found matching this query. Please try a different query."
+          message: "No books were found."
         })
       );
   };
@@ -45,12 +45,12 @@ class Home extends Component {
     const book = this.state.books.find(book => book.id === id);
 
     API.saveBook({
-      bookId: book.id,
       title: book.volumeInfo.title,
-      link: book.volumeInfo.infoLink,
+      bookId: book.id,
       authors: book.volumeInfo.authors,
       description: book.volumeInfo.description,
-      image: book.volumeInfo.imageLinks.thumbnail
+      image: book.volumeInfo.imageLinks.thumbnail,
+      link: book.volumeInfo.infoLink
     }).then(() => this.getBooks());
   };
 
