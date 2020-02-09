@@ -4,6 +4,6 @@ const googleApiRoutes = require("./googleApi")
 
 // Book routes
 router.use("/books", bookRoutes);
-router.use("/googleApi", googleApiRoutes);
+router.use("/google", googleApiRoutes);
 
 module.exports = router;
