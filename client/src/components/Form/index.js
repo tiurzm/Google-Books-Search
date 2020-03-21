@@ -2,7 +2,7 @@ import React from "react";
 
 function Form({ q, handleInputChange, handleFormSubmit }) {
   return (
-    <form>
+    <form className="m-4">
       <div className="form-group">
         <label htmlFor="Query">
           <h3><strong>Book Title</strong></h3>
