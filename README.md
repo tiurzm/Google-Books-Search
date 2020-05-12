@@ -5,6 +5,10 @@ Google Books is a react application that searches for books via the Google Books
 ## How to use it:
 **Link: [Google Books](https://search-books-react.herokuapp.com/)**
 
-**1. Enter the book's title and click search.**
+**1. Enter the book's title and click search.** 
 
 ![Home](./images-for-read.me/1.png)
+
+**2. Click save button to save your book.** 
+
+![Saved](./images-for-read.me/2.png)
